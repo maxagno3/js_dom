@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Over event || DOM Assignment</title>
+</head>
+
+<body>
+    <div class="mainClass">
+        <h1>Mouse Move Cursor</h1>
+        <ul>
+            <li class="screenX">881</li>
+            <li class="screenY">343</li>
+            <li class="clientX">467</li>
+            <li class="clientY">164</li>
+        </ul>
+    </div>
+<!-- Styling part -->
+    <style>
+        h1 {
+            font-size: 30px;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        ul {
+            list-style-type: none;
+            font-size: 22px;
+        }
+        ul li {
+            margin: 10px 0;
+        }
+    </style>
+<!-- Writing JS -->
+    <script>
+        let mainClass = document.querySelector('.mainClass');
+
+        function changeValues(event){
+            let screenX = document.querySelector('.screenX');
+            screenX.innerHTML = event.screenX;
+            let screenY = document.querySelector('.screenY');
+            screenY.innerHTML = event.screenY;
+            let clientX = document.querySelector('.clientX');
+            clientX.innerHTML = event.clientX;
+            let clientY = document.querySelector('.clientY');
+            clientY.innerHTML = event.clientY;
+        }
+        
+        mainClass.addEventListener('mousemove', changeValues);
+    </script>
+</body>
+</html>

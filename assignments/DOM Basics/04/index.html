@@ -12,5 +12,24 @@
       <li>Favorites: <span id="favorites"></span></li>
       <li>Hometown: <span id="hometown"></span></li>
     </ul>
+    <script>
+      document.body.style.fontFamily = 'Arial, sans-serif';
+
+      let nick = document.querySelector('#nickname');
+      nick.innerHTML = 'Max';
+
+      let fav = document.querySelector('#favorites');
+      fav.innerHTML = 'Football';
+
+      let home = document.querySelector('#hometown');
+      home.innerHTML = 'Himachal Pradesh';
+
+      let li = document.querySelectorAll('li');
+      li.forEach(changeColor => changeColor.className = 'listitems');
+      
+      let image = document.createElement('img');
+      image.setAttribute('src', 'Screenshot from 2020-01-22 22-58-00.png');
+      document.body.append(image);
+    </script>
   </body>
 </html>

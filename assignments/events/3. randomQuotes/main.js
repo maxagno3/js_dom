@@ -1,8 +1,19 @@
 var quotes;
 
 // Write your code here
-
-
+document.addEventListener('keyup', randomQuote);
+let newAuthor = document.createElement('h1');
+let newQuote = document.createElement('p');
+function randomQuote(event){
+    if(event.keyCode === 32){
+        let arr = quotes;
+        someQuote = quotes[Math.floor(Math.random() * [arr.length - 1])];
+        newAuthor.innerText = someQuote.quoteAuthor;
+        newQuote.innerText = someQuote.quoteText;
+        document.body.append(newAuthor);
+        document.body.append(newQuote);
+    }
+}
 
 quotes = [
     {

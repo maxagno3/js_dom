@@ -39,5 +39,18 @@
     const p = document.getElementsByTagName("p")[0];
     const ul = document.getElementsByTagName("ul")[0];
     // Your code goes here
+    ul.firstElementChild.style.backgroundColor = 'yellow';
+
+    for(let el of ul.children){
+      el.style.backgroundColor = 'red';
+    }
+
+    document.body.children[3].lastElementChild.style.backgroundColor = 'pink';
+
+    let second = document.body.children[3].children[1];
+
+    second.previousElementSibling.style.backgroundColor = 'coral';
+    
+    second.nextElementSibling.style.backgroundColor = 'aquamarine';
   </script>
 </html>
